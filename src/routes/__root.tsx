@@ -77,15 +77,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Nova Meta Plast" },
+      { name: "description", content: "Nova Meta Plast Showcase is a B2B manufacturing website for plastic switch component finishing." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Nova Meta Plast" },
+      { property: "og:description", content: "Nova Meta Plast Showcase is a B2B manufacturing website for plastic switch component finishing." },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Nova Meta Plast" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Nova Meta Plast" },
+      { name: "twitter:description", content: "Nova Meta Plast Showcase is a B2B manufacturing website for plastic switch component finishing." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/86ddb1b0-34c1-47d5-88b9-b61a008eb1e0/id-preview-ed83c85b--12cbcc3d-14e5-4347-8b9e-19da22155c3a.lovable.app-1782035063976.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/86ddb1b0-34c1-47d5-88b9-b61a008eb1e0/id-preview-ed83c85b--12cbcc3d-14e5-4347-8b9e-19da22155c3a.lovable.app-1782035063976.png" },
     ],
     links: [
       {
