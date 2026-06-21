@@ -49,7 +49,7 @@ export const Route = createFileRoute("/")({
           logo: "/favicon.ico",
           contactPoint: {
             "@type": "ContactPoint",
-            email: "info@novametaplast.com",
+            email: "novametaplast@rediffmail.com",
             contactType: "Sales",
           },
         }),
@@ -442,7 +442,7 @@ function Index() {
             </p>
             <ul className="mt-10 space-y-5">
               {[
-                { icon: Mail, label: "info@novametaplast.com" },
+                { icon: Mail, label: "novametaplast@rediffmail.com" },
                 { icon: Phone, label: "+91 00000 00000" },
                 { icon: MapPin, label: "Manufacturing Hub, India" },
               ].map((c) => (
@@ -517,7 +517,7 @@ function Index() {
           <div>
             <h4 className="text-white font-semibold text-sm uppercase tracking-wider">Contact</h4>
             <ul className="mt-5 space-y-3 text-sm">
-              <li className="flex items-start gap-2.5"><Mail className="h-4 w-4 mt-0.5 text-accent shrink-0" />info@novametaplast.com</li>
+              <li className="flex items-start gap-2.5"><Mail className="h-4 w-4 mt-0.5 text-accent shrink-0" />novametaplast@rediffmail.com</li>
               <li className="flex items-start gap-2.5"><Phone className="h-4 w-4 mt-0.5 text-accent shrink-0" />+91 00000 00000</li>
               <li className="flex items-start gap-2.5"><MapPin className="h-4 w-4 mt-0.5 text-accent shrink-0" />Manufacturing Hub, India</li>
             </ul>
