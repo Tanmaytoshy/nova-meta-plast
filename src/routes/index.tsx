@@ -7,6 +7,7 @@ import {
   Linkedin, Twitter, Facebook, Instagram, Menu, X,
 } from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
+import logoImg from "@/assets/logo.png";
 import coatingImg from "@/assets/service-coating.jpg";
 import foilingImg from "@/assets/service-foiling.jpg";
 import laserImg from "@/assets/service-laser.jpg";
@@ -138,9 +139,7 @@ function Index() {
       <header className="fixed top-0 inset-x-0 z-50 border-b border-white/10 bg-[oklch(0.16_0.05_255_/_0.85)] backdrop-blur-xl">
         <div className="container-px mx-auto max-w-7xl flex items-center justify-between h-16">
           <a href="#top" className="flex items-center gap-2.5 text-white">
-            <span className="grid place-items-center h-9 w-9 rounded-md bg-gradient-to-br from-accent to-[oklch(0.78_0.15_220)] shadow-[0_0_20px_oklch(0.68_0.18_245/0.5)]">
-              <Zap className="h-4 w-4 text-white" strokeWidth={2.5} />
-            </span>
+            <img src={logoImg} alt="Nova Meta Plast logo" className="h-10 w-10 rounded-md bg-white p-1 object-contain" width={40} height={40} />
             <span className="font-display font-semibold tracking-tight">Nova Meta Plast</span>
           </a>
           <nav className="hidden lg:flex items-center gap-8 text-sm text-white/75">
@@ -488,9 +487,7 @@ function Index() {
         <div className="container-px mx-auto max-w-7xl py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2.5 text-white">
-              <span className="grid place-items-center h-9 w-9 rounded-md bg-gradient-to-br from-accent to-[oklch(0.78_0.15_220)]">
-                <Zap className="h-4 w-4 text-white" strokeWidth={2.5} />
-              </span>
+              <img src={logoImg} alt="Nova Meta Plast logo" className="h-10 w-10 rounded-md bg-white p-1 object-contain" width={40} height={40} />
               <span className="font-display font-semibold tracking-tight">Nova Meta Plast</span>
             </div>
             <p className="mt-4 text-sm">Precision. Finish. Innovation.</p>
