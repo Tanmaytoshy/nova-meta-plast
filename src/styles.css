@@ -215,5 +215,4 @@
 }
 @utility animate-pulse-ring {
   animation: pulse-ring 2s ease-out infinite;
-  }
 }
