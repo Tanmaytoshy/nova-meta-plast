@@ -7,6 +7,7 @@ import {
   Linkedin, Twitter, Facebook, Instagram, Menu, X,
 } from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
+import logoImg from "@/assets/logo.png";
 import coatingImg from "@/assets/service-coating.jpg";
 import foilingImg from "@/assets/service-foiling.jpg";
 import laserImg from "@/assets/service-laser.jpg";
@@ -49,7 +50,7 @@ export const Route = createFileRoute("/")({
           logo: "/favicon.ico",
           contactPoint: {
             "@type": "ContactPoint",
-            email: "info@novametaplast.com",
+            email: "novametaplast@rediffmail.com",
             contactType: "Sales",
           },
         }),
@@ -138,9 +139,7 @@ function Index() {
       <header className="fixed top-0 inset-x-0 z-50 border-b border-white/10 bg-[oklch(0.16_0.05_255_/_0.85)] backdrop-blur-xl">
         <div className="container-px mx-auto max-w-7xl flex items-center justify-between h-16">
           <a href="#top" className="flex items-center gap-2.5 text-white">
-            <span className="grid place-items-center h-9 w-9 rounded-md bg-gradient-to-br from-accent to-[oklch(0.78_0.15_220)] shadow-[0_0_20px_oklch(0.68_0.18_245/0.5)]">
-              <Zap className="h-4 w-4 text-white" strokeWidth={2.5} />
-            </span>
+            <img src={logoImg} alt="Nova Meta Plast logo" className="h-10 w-10 rounded-md bg-white p-1 object-contain" width={40} height={40} />
             <span className="font-display font-semibold tracking-tight">Nova Meta Plast</span>
           </a>
           <nav className="hidden lg:flex items-center gap-8 text-sm text-white/75">
@@ -442,7 +441,7 @@ function Index() {
             </p>
             <ul className="mt-10 space-y-5">
               {[
-                { icon: Mail, label: "info@novametaplast.com" },
+                { icon: Mail, label: "novametaplast@rediffmail.com" },
                 { icon: Phone, label: "+91 00000 00000" },
                 { icon: MapPin, label: "Manufacturing Hub, India" },
               ].map((c) => (
@@ -488,9 +487,7 @@ function Index() {
         <div className="container-px mx-auto max-w-7xl py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2.5 text-white">
-              <span className="grid place-items-center h-9 w-9 rounded-md bg-gradient-to-br from-accent to-[oklch(0.78_0.15_220)]">
-                <Zap className="h-4 w-4 text-white" strokeWidth={2.5} />
-              </span>
+              <img src={logoImg} alt="Nova Meta Plast logo" className="h-10 w-10 rounded-md bg-white p-1 object-contain" width={40} height={40} />
               <span className="font-display font-semibold tracking-tight">Nova Meta Plast</span>
             </div>
             <p className="mt-4 text-sm">Precision. Finish. Innovation.</p>
@@ -517,7 +514,7 @@ function Index() {
           <div>
             <h4 className="text-white font-semibold text-sm uppercase tracking-wider">Contact</h4>
             <ul className="mt-5 space-y-3 text-sm">
-              <li className="flex items-start gap-2.5"><Mail className="h-4 w-4 mt-0.5 text-accent shrink-0" />info@novametaplast.com</li>
+              <li className="flex items-start gap-2.5"><Mail className="h-4 w-4 mt-0.5 text-accent shrink-0" />novametaplast@rediffmail.com</li>
               <li className="flex items-start gap-2.5"><Phone className="h-4 w-4 mt-0.5 text-accent shrink-0" />+91 00000 00000</li>
               <li className="flex items-start gap-2.5"><MapPin className="h-4 w-4 mt-0.5 text-accent shrink-0" />Manufacturing Hub, India</li>
             </ul>
