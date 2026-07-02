@@ -51,7 +51,16 @@ export const Route = createFileRoute("/")({
           contactPoint: {
             "@type": "ContactPoint",
             email: "novametaplast@rediffmail.com",
+            telephone: "+91-98705-64448",
             contactType: "Sales",
+          },
+          founder: { "@type": "Person", name: "Nilesh Toshniwal", jobTitle: "CEO" },
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Raj Prabha Enclave 4, Bldg no 3, Gala no 14, 1st floor, opp new Metro Medical, Bohida Pada, Satvali Road",
+            addressLocality: "Vasai (E)",
+            postalCode: "401208",
+            addressCountry: "IN",
           },
         }),
       },
@@ -442,17 +451,22 @@ function Index() {
             <ul className="mt-10 space-y-5">
               {[
                 { icon: Mail, label: "novametaplast@rediffmail.com" },
-                { icon: Phone, label: "+91 00000 00000" },
-                { icon: MapPin, label: "Manufacturing Hub, India" },
+                { icon: Phone, label: "+91 98705 64448" },
+                { icon: MapPin, label: "Raj Prabha Enclave 4, Bldg no 3, Gala no 14, 1st floor, opp new Metro Medical, Bohida Pada, Satvali Road, Vasai (E) 401208" },
               ].map((c) => (
                 <li key={c.label} className="flex items-center gap-4">
                   <div className="grid place-items-center h-11 w-11 rounded-lg bg-white/5 border border-white/10 text-accent">
                     <c.icon className="h-4 w-4" />
                   </div>
-                  <span className="text-white/85">{c.label}</span>
+                  <span className="text-white/85 leading-relaxed">{c.label}</span>
                 </li>
               ))}
             </ul>
+            <div className="mt-8 rounded-xl border border-white/10 bg-white/[0.03] p-5">
+              <p className="text-xs uppercase tracking-[0.22em] text-accent font-medium">Leadership</p>
+              <p className="mt-2 text-white font-semibold">Nilesh Toshniwal</p>
+              <p className="text-white/60 text-sm">Chief Executive Officer</p>
+            </div>
           </div>
           <form
             onSubmit={(e) => { e.preventDefault(); alert("Thank you — we'll be in touch shortly."); }}
@@ -515,8 +529,8 @@ function Index() {
             <h4 className="text-white font-semibold text-sm uppercase tracking-wider">Contact</h4>
             <ul className="mt-5 space-y-3 text-sm">
               <li className="flex items-start gap-2.5"><Mail className="h-4 w-4 mt-0.5 text-accent shrink-0" />novametaplast@rediffmail.com</li>
-              <li className="flex items-start gap-2.5"><Phone className="h-4 w-4 mt-0.5 text-accent shrink-0" />+91 00000 00000</li>
-              <li className="flex items-start gap-2.5"><MapPin className="h-4 w-4 mt-0.5 text-accent shrink-0" />Manufacturing Hub, India</li>
+              <li className="flex items-start gap-2.5"><Phone className="h-4 w-4 mt-0.5 text-accent shrink-0" />+91 98705 64448</li>
+              <li className="flex items-start gap-2.5"><MapPin className="h-4 w-4 mt-0.5 text-accent shrink-0" />Raj Prabha Enclave 4, Bldg no 3, Gala no 14, 1st floor, opp new Metro Medical, Bohida Pada, Satvali Road, Vasai (E) 401208</li>
             </ul>
           </div>
         </div>
