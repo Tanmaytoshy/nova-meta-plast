@@ -342,7 +342,7 @@ function Index() {
                 return (
                   <li key={step.title} className="relative grid lg:grid-cols-2 gap-6 items-center">
                     <div className={`hidden lg:block ${left ? "order-1" : "order-2"}`} />
-                    <div className={`relative pl-16 lg:pl-0 ${left ? "lg:order-2 lg:pl-16" : "lg:order-1 lg:pr-16 lg:text-right"}`}>
+                    <div className={`relative pl-16 ${left ? "lg:order-2 lg:pl-20" : "lg:order-1 lg:pl-0 lg:pr-20 lg:text-right"}`}>
                       <div className={`absolute top-1 left-0 lg:left-auto ${left ? "lg:-left-7" : "lg:-right-7"} grid place-items-center h-10 w-10 rounded-full bg-gradient-to-br from-accent to-[oklch(0.78_0.15_220)] text-white shadow-[var(--shadow-glow)] ring-4 ring-[oklch(0.16_0.05_255)]`}>
                         <step.icon className="h-4 w-4" />
                       </div>
