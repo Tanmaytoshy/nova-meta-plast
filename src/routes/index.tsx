@@ -335,20 +335,44 @@ function Index() {
             </p>
           </div>
           <ol className="mt-16 relative">
-            <div className="absolute left-5 lg:left-1/2 top-2 bottom-2 w-px bg-gradient-to-b from-accent/60 via-white/15 to-accent/60" aria-hidden />
-            <div className="space-y-10 lg:space-y-16">
+            {/* Vertical line: left on mobile, centered on desktop */}
+            <div
+              className="absolute top-2 bottom-2 w-px bg-gradient-to-b from-accent/60 via-white/15 to-accent/60 left-5 lg:left-1/2 lg:-translate-x-1/2"
+              aria-hidden
+            />
+            <div className="space-y-10 lg:space-y-14">
               {processSteps.map((step, i) => {
                 const left = i % 2 === 0;
                 return (
-                  <li key={step.title} className="relative grid lg:grid-cols-2 gap-6 items-center">
-                    <div className={`hidden lg:block ${left ? "order-1" : "order-2"}`} />
-                    <div className={`relative pl-16 ${left ? "lg:order-2 lg:pl-20" : "lg:order-1 lg:pl-0 lg:pr-20 lg:text-right"}`}>
-                      <div className={`absolute top-1 left-0 lg:left-auto ${left ? "lg:-left-7" : "lg:-right-7"} grid place-items-center h-10 w-10 rounded-full bg-gradient-to-br from-accent to-[oklch(0.78_0.15_220)] text-white shadow-[var(--shadow-glow)] ring-4 ring-[oklch(0.16_0.05_255)]`}>
-                        <step.icon className="h-4 w-4" />
+                  <li
+                    key={step.title}
+                    className="relative grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] items-center gap-x-8"
+                  >
+                    {/* Left content (desktop) */}
+                    <div className={`hidden lg:block ${left ? "lg:pr-4 lg:text-right" : "lg:invisible"}`}>
+                      {left && (
+                        <>
+                          <div className="text-xs uppercase tracking-[0.2em] text-accent">
+                            Step {String(i + 1).padStart(2, "0")}
+                          </div>
+                          <h3 className="mt-1 text-2xl font-semibold">{step.title}</h3>
+                          <p className="mt-2 text-white/65">{step.desc}</p>
+                        </>
+                      )}
+                    </div>
+
+                    {/* Circle: absolute on mobile, in-grid on desktop */}
+                    <div className="absolute left-5 top-1 -translate-x-1/2 lg:static lg:translate-x-0 lg:justify-self-center z-10 grid place-items-center h-10 w-10 rounded-full bg-gradient-to-br from-accent to-[oklch(0.78_0.15_220)] text-white shadow-[var(--shadow-glow)] ring-4 ring-[oklch(0.16_0.05_255)]">
+                      <step.icon className="h-4 w-4" />
+                    </div>
+
+                    {/* Mobile content + Right content (desktop) */}
+                    <div className={`pl-16 lg:pl-0 ${left ? "lg:hidden" : "lg:block lg:pl-4"}`}>
+                      <div className="text-xs uppercase tracking-[0.2em] text-accent">
+                        Step {String(i + 1).padStart(2, "0")}
                       </div>
-                      <div className="text-xs uppercase tracking-[0.2em] text-accent">Step {String(i + 1).padStart(2, "0")}</div>
                       <h3 className="mt-1 text-2xl font-semibold">{step.title}</h3>
-                      <p className="mt-2 text-white/65 max-w-md lg:max-w-none lg:inline-block">{step.desc}</p>
+                      <p className="mt-2 text-white/65">{step.desc}</p>
                     </div>
                   </li>
                 );
