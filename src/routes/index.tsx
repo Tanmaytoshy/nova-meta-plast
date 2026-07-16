@@ -14,6 +14,11 @@ import laserImg from "@/assets/service-laser.jpg";
 import switchesImg from "@/assets/gallery-switches.jpg";
 import facilityImg from "@/assets/gallery-facility.jpg";
 import qcImg from "@/assets/gallery-qc.jpg";
+import logoVihan from "@/assets/logo-vihan.png.asset.json";
+import logoAmron from "@/assets/logo-amron.png.asset.json";
+import logoParcos from "@/assets/logo-parcos.png.asset.json";
+import logoCaptain from "@/assets/logo-captain.png.asset.json";
+import logoAroma from "@/assets/logo-aroma.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
