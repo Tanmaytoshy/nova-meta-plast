@@ -23,11 +23,11 @@ import logoAroma from "@/assets/logo-aroma.png.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Nova Meta Plast — Precision Finishing for Premium Switch Components" },
+      { title: "Nova Meta Plast — Precision Switch Component Finishing" },
       {
         name: "description",
         content:
-          "Nova Meta Plast delivers advanced Color Coating, Hot Foil Stamping, and Laser Marking for plastic switch components — a trusted manufacturing partner for OEMs and electrical brands.",
+          "Nova Meta Plast provides advanced color coating, hot foil stamping, and laser marking for plastic switch components — a trusted manufacturing partner.",
       },
       { name: "keywords", content: "Plastic Switch Finishing, Color Coating Services, Hot Foil Stamping, Laser Marking Services, Switch Component Decoration, Industrial Finishing Solutions, Electrical Switch Manufacturing, Plastic Component Coating" },
       { property: "og:title", content: "Nova Meta Plast — Precision. Finish. Innovation." },
@@ -67,6 +67,36 @@ export const Route = createFileRoute("/")({
             postalCode: "401208",
             addressCountry: "IN",
           },
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "Nova Meta Plast",
+          image: "https://nova-meta-plast.lovable.app/favicon.ico",
+          url: "https://nova-meta-plast.lovable.app/",
+          telephone: "+91-98705-64448",
+          email: "novametaplast@rediffmail.com",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Raj Prabha Enclave 4, Bldg no 3, Gala no 14, 1st floor, opp new Metro Medical, Bohida Pada, Satvali Road",
+            addressLocality: "Vasai (E)",
+            postalCode: "401208",
+            addressCountry: "IN",
+          },
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            { "@type": "Service", name: "Color Coating", provider: { "@type": "Organization", name: "Nova Meta Plast" }, areaServed: "IN", description: "Precision color coating for plastic switch components with consistent thickness and tone." },
+            { "@type": "Service", name: "Hot Foil Stamping", provider: { "@type": "Organization", name: "Nova Meta Plast" }, areaServed: "IN", description: "Metallic and decorative hot foil stamping for premium switch finishes." },
+            { "@type": "Service", name: "Laser Marking", provider: { "@type": "Organization", name: "Nova Meta Plast" }, areaServed: "IN", description: "High-precision laser marking of icons, text, and backlit symbols on plastic switch components." },
+          ],
         }),
       },
     ],
@@ -531,14 +561,15 @@ function Index() {
             className="rounded-2xl bg-white/[0.04] border border-white/10 backdrop-blur p-6 sm:p-8 shadow-[var(--shadow-elevated)]"
           >
             <div className="grid sm:grid-cols-2 gap-4">
-              <Field label="Name" name="name" />
-              <Field label="Company Name" name="company" />
-              <Field label="Email" name="email" type="email" />
-              <Field label="Phone Number" name="phone" type="tel" />
+              <Field label="Name" name="name" id="contact-name" />
+              <Field label="Company Name" name="company" id="contact-company" />
+              <Field label="Email" name="email" type="email" id="contact-email" />
+              <Field label="Phone Number" name="phone" type="tel" id="contact-phone" />
             </div>
             <div className="mt-4">
-              <label className="block text-xs uppercase tracking-wider text-white/60 mb-2">Requirement</label>
+              <label htmlFor="contact-requirement" className="block text-xs uppercase tracking-wider text-white/60 mb-2">Requirement</label>
               <textarea
+                id="contact-requirement"
                 name="requirement"
                 rows={5}
                 required
@@ -603,11 +634,12 @@ function Index() {
   );
 }
 
-function Field({ label, name, type = "text" }: { label: string; name: string; type?: string }) {
+function Field({ label, name, type = "text", id }: { label: string; name: string; type?: string; id: string }) {
   return (
     <div>
-      <label className="block text-xs uppercase tracking-wider text-white/60 mb-2">{label}</label>
+      <label htmlFor={id} className="block text-xs uppercase tracking-wider text-white/60 mb-2">{label}</label>
       <input
+        id={id}
         type={type}
         name={name}
         required
