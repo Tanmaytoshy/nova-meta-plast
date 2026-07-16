@@ -285,6 +285,35 @@ function Index() {
         </div>
       </section>
 
+      {/* TRUSTED BY */}
+      <section aria-label="Trusted by leading brands" className="relative py-16 bg-background border-y border-border overflow-hidden">
+        <div className="container-px mx-auto max-w-7xl">
+          <div className="text-center">
+            <span className="text-xs uppercase tracking-[0.22em] text-accent font-medium">Trusted By</span>
+            <h2 className="mt-3 text-2xl sm:text-3xl font-bold">
+              Chosen by India's leading switch & electrical brands
+            </h2>
+          </div>
+          <div className="relative mt-10 group" style={{ maskImage: "linear-gradient(90deg, transparent, black 10%, black 90%, transparent)", WebkitMaskImage: "linear-gradient(90deg, transparent, black 10%, black 90%, transparent)" }}>
+            <div className="flex gap-16 animate-[marquee_30s_linear_infinite] group-hover:[animation-play-state:paused]">
+              {[...Array(2)].flatMap((_, r) => (
+                [
+                  { src: logoVihan.url, alt: "Vihan" },
+                  { src: logoAmron.url, alt: "Amron Switches" },
+                  { src: logoParcos.url, alt: "Parcos" },
+                  { src: logoCaptain.url, alt: "Captain Switches" },
+                  { src: logoAroma.url, alt: "Aroma Plus" },
+                ].map((l, i) => (
+                  <div key={`${r}-${i}`} className="shrink-0 grid place-items-center h-20 w-44 opacity-70 hover:opacity-100 transition-opacity">
+                    <img src={l.src} alt={l.alt} className="max-h-14 max-w-full w-auto object-contain" loading="lazy" />
+                  </div>
+                ))
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* SERVICES */}
       <section id="services" className="relative py-24 lg:py-32 bg-secondary/40 border-y border-border">
         <div className="container-px mx-auto max-w-7xl">
